@@ -61,29 +61,29 @@
     <?php
 
     $liste = array("Leny", "Mehdi", "Mathias", "Alex", "Esteban","Yannice");
-    $camarade = $liste[array_rand($liste)];
+    $camarade = $liste[array_rand($liste)]; //rajout pour que quand on actalise la page $liste change et le message change donc en fonction de la variable prise.
 
     switch ($camarade) {
         case "Leny":
-            echo "Lache solo leveling sayer (Leny)";
+            echo "Leny est la";
             break;
         case "Mehdi":
-            echo "Mephiles the dark trop baka (Mehdi)";
+            echo 'Medhi est la';
             break;
         case "Mathias":
-            echo "90 picomètres pas si mal (Mathias)";
+            echo 'Mathias est la';
             break;
         case "Alex":
-            echo "Le mec cultivé la (Alex)";
+            echo 'Alex est la';
             break;
         case "Esteban":
-            echo "Pokequizz sah rien a ajouter (Esteban)";
+            echo 'Esteban est la';
             break;
         case "Yannice":
-            echo "Roquette la tour du roi (Yannice)";
+            echo 'Yannice est la';
             break;
         default:
-            echo "Tu n'es pas dans la liste (Inconnu)";
+            echo 'Tu n\'existe pas dans la liste';
             break;
     }
     ?>
