@@ -1,11 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php
+// Définition d'une classe Personne
+class Personne {
+    // Propriétés (attributs)
+    private $nom;
+    private $prenom;
+    private $age;
     
-</body>
-</html>
+    // Constructeur
+
+    
+    // Getters (accesseurs)
+    
+    // Setters (mutateurs)
+
+    
+    // Méthodes
+    public function sePresenter()
+    {
+
+    }
+    
+    public function estMajeur()
+    {
+        
+    }
+
+// Utilisation de la classe
+
+
+// Modification des propriétés
+}
