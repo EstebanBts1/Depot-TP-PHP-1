@@ -7,26 +7,41 @@ class Personne {
     private $age;
     
     // Constructeur
+    public function __construct($nom, $prenom, $age) {
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+        $this->age = $age;
+    }
 
-    
     // Getters (accesseurs)
-    
+    public function getNom() {
+        return $this->nom;
+    }
+
+    public function getPrenom() {
+        return $this->prenom;
+    }
+
+    public function getAge() {
+        return $this->age;
+    }
+
     // Setters (mutateurs)
-
-    
-    // Méthodes
-    public function sePresenter()
-    {
-
-    }
-    
-    public function estMajeur()
-    {
-        
+    public function setNom($nom) {
+        $this->nom = $nom;
     }
 
-// Utilisation de la classe
+    public function setPrenom($prenom) {
+        $this->prenom = $prenom;
+    }
 
-
-// Modification des propriétés
+    public function setAge($age) {
+        $this->age = $age;
+    }
 }
+
+// Modification des propriétés via les setters
+$personne1->setAge(16);
+$personne1->sePresenter();
+$personne1->estMajeur();
+?>
