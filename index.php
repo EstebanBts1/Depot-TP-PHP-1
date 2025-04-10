@@ -57,5 +57,35 @@
         echo "Note: " . $note . "/20 - ".$Appreciation;
 
     ?>
+    <H1>Exercice supplémentaire (implementer camarades)</H1>
+    <?php
+
+    $liste = array("Leny", "Mehdi", "Mathias", "Alex", "Esteban","Yannice");
+    $camarade = $liste[array_rand($liste)];
+
+    switch ($camarade) {
+        case "Leny":
+            echo "Lache solo leveling sayer (Leny)";
+            break;
+        case "Mehdi":
+            echo "Mephiles the dark trop baka (Mehdi)";
+            break;
+        case "Mathias":
+            echo "90 picomètres pas si mal (Mathias)";
+            break;
+        case "Alex":
+            echo "Le mec cultivé la (Alex)";
+            break;
+        case "Esteban":
+            echo "Pokequizz sah rien a ajouter (Esteban)";
+            break;
+        case "Yannice":
+            echo "Roquette la tour du roi (Yannice)";
+            break;
+        default:
+            echo "Tu n'es pas dans la liste (Inconnu)";
+            break;
+    }
+    ?>
 </body>
 </html>
