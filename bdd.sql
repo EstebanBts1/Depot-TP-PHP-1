@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS `Base-php` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE `Base-php`;
+
+CREATE TABLE IF NOT EXISTS `utilisateurs` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `nom` VARCHAR(100) NOT NULL,
+    `age` INT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
