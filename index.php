@@ -61,6 +61,19 @@ class Moto extends Vehicule {
     }
 }
 
+class Bateau extends Vehicule {
+    private $typeBateau;
+
+    public function __construct($marque, $modele, $annee, $typeBateau){
+        parent::construct($marque, $modele, $annee, $typebateau);
+        $this->typeBateau = $typeBateau;
+    }
+    public function getInfos() {
+        echo parent::getInfos();
+    }
+
+}
+
 // Utilisation des classes
 $voiture = new Voiture("Renault", "Clio", 2020, 5, "Essence");
 $voiture->getInfos();
