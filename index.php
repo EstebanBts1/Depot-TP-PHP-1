@@ -12,11 +12,11 @@ class Vehicule {
     }
     
     public function getInfos() {
-        return "Marque : $this->marque, Modèle : $this->modele, Année : $this->annee";
+        echo "Marque : $this->marque, Modèle : $this->modele, Année : $this->annee";
     }
     
     public function demarrer() {
-        return "Le véhicule démarre.";
+        echo "Le véhicule démarre.";
     }
 }
 
@@ -35,22 +35,37 @@ class Voiture extends Vehicule {
     
     // Surcharge de la méthode getInfos()
     public function getInfos() {
-        return parent::getInfos() . ", Portes : $this->nombrePortes, Carburant : $this->typeCarburant";
+        echo parent::getInfos() . ", Portes : $this->nombrePortes, Carburant : $this->typeCarburant,<br>";
     }
     
     // Méthode spécifique
     public function klaxonner() {
-        return "La voiture klaxonne : TCHOU TCHOU!";
+        echo "La voiture klaxonne : TCHOU TCHOU!,<br>";
     }
 }
 
 // Classe enfant qui hérite de Vehicule
 class Moto extends Vehicule {
-    private $cylindree;
+    private $cylindre;
     
-
+    public function __construct($marque, $modele, $annee, $cylindre) {
+        parent::__construct($marque, $modele, $annee); // Appel du constructeur parent        
+        $this->cylindre = $cylindre;
+        // Initialisation des propriétés spécifiques
+    }
+    public function getInfos() {
+        echo parent::getInfos() . ", Cylindre : $this->cylindre,<br>";
+    }
+    public function faireRoueArriere() {
+        echo "La moto fait une roue arrière !","<br>";
+    }
 }
 
 // Utilisation des classes
 $voiture = new Voiture("Renault", "Clio", 2020, 5, "Essence");
+$voiture->getInfos();
+$voiture->klaxonner();
 
+$moto = new Moto("Yamaha", "MT-07", 2021, 689);
+$moto->getInfos();
+$moto->faireRoueArriere();
