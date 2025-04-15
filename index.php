@@ -16,7 +16,7 @@ class Vehicule {
     }
     
     public function demarrer() {
-        echo "Le véhicule démarre.";
+        echo "Le véhicule démarre.<br>";
     }
 }
 
@@ -40,7 +40,7 @@ class Voiture extends Vehicule {
     
     // Méthode spécifique
     public function klaxonner() {
-        echo "La voiture klaxonne : TCHOU TCHOU!,<br>";
+        echo "La voiture klaxonne : TUTUTUTU TUTUTUTU!,<br>";
     }
 }
 
@@ -64,8 +64,10 @@ class Moto extends Vehicule {
 // Utilisation des classes
 $voiture = new Voiture("Renault", "Clio", 2020, 5, "Essence");
 $voiture->getInfos();
+$voiture->demarrer();
 $voiture->klaxonner();
 
 $moto = new Moto("Yamaha", "MT-07", 2021, 689);
 $moto->getInfos();
+$moto->demarrer();
 $moto->faireRoueArriere();
