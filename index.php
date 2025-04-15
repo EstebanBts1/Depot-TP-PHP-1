@@ -38,10 +38,20 @@ class Personne {
     public function setAge($age) {
         $this->age = $age;
     }
+    public function sePresenter() {
+        echo "Mon nom est ", $this->nom, " ", $this->prenom, " et j'ai ", $this->age, " ans.<br>";
+    }
+    public function estMajeur() {
+        if ($this->age >= 18) {
+            echo $this->prenom . " est majeur(e).<br>";
+        } else {
+            echo $this->prenom . " est mineur(e).<br>";
+        }
+    }
 }
 
 // Modification des propriétés via les setters
-$personne1->setAge(16);
+$personne1 = new Personne("Guillard","Lény",19);
+//$personne1->setAge(20);
 $personne1->sePresenter();
 $personne1->estMajeur();
-?>
