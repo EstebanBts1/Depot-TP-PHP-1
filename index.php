@@ -45,14 +45,14 @@ try {
     // Mise à jour de l'âge de l'utilisateur
     $sql = "UPDATE utilisateurs SET age = ? WHERE id = ?";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([40, 1]);
+    $stmt->execute([38, 145]);
 
     echo "Nombre d'utilisateurs mis à jour : " . $stmt->rowCount() . "</br></br>";
 
     print ("EXERCICE 4</br></br>");
     $sql = "DELETE FROM utilisateurs WHERE id = ?";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([1]);
+    $stmt->execute([146]);
 
     echo "Nombre d'utilisateurs supprimés : " . $stmt->rowCount() . "</br></br>";
 
